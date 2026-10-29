@@ -20,7 +20,7 @@
 <script>
 // 행사 업데이트는 아래 배열만 수정하세요. 새로운 행사를 추가하면 카드가 자동으로 생성됩니다.
 const events = [
-  {title:'Tails UP! VOL.4 — 동부산',start:'2026.11.06',end:'2026.11.08',location:'롯데아울렛 동부산점 리빙관',description:'좋은 브랜드에 재미까지 더한 프리미엄 펫페어!',image:'assets/tails-up-keyvisual.jpg'}
+  {title:'Tails UP! VOL.4 — 동부산',start:'2026.11.06',end:'2026.11.08',location:'롯데아울렛 동부산점 리빙관',description:'좋은 브랜드에 재미까지 더한 프리미엄 펫페어!',image:'tails-up-keyvisual.jpg'}
 ];
 const escapeHtml = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 document.querySelector('#event-list').innerHTML=events.map(e=>`<article class="event-card"><img src="${escapeHtml(e.image)}" alt="${escapeHtml(e.title)} 포스터"><div class="event-content"><span class="pill">EVENT</span><h3>${escapeHtml(e.title)}</h3><p><strong>📅 ${escapeHtml(e.start)} — ${escapeHtml(e.end)}</strong><br>📍 ${escapeHtml(e.location)}</p><p>${escapeHtml(e.description)}</p></div></article>`).join('');
